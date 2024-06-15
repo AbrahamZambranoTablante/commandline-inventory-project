@@ -1,5 +1,5 @@
 const { readJSONFile, writeJSONFile} = require("./src/helpers");
-const { create, index, remove, show, update, add, eliminate } = require("./src/t-shirtsController");
+const { create, index, remove, show, update, add, eliminate, clear } = require("./src/t-shirtsController");
 
 function run () {
     let tShirtsData = readJSONFile("./data", "t-shirts.json");
@@ -46,6 +46,11 @@ function run () {
         case "eliminate":
             updatedCart = eliminate(shoppingCart, id);
             inform("Item was removed from cart");
+            writeToCartFile = true;
+        break;
+        case "clear":
+            updatedCart = clear(shoppingCart);
+            inform("The cart was cleared");
             writeToCartFile = true;
         break;
         default:

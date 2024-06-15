@@ -46,4 +46,8 @@ function eliminate (cartData, id) {
     return updatedCartData;
 }
 
-module.exports = { create, index, remove, show, update, add, eliminate };
+function clear (cartData){
+    return [];
+}
+
+module.exports = { create, index, remove, show, update, add, eliminate, clear };
