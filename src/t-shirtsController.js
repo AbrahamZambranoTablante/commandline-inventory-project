@@ -41,4 +41,9 @@ function add (tShirtsData, cartData, id) {
     return cartData;
 }
 
-module.exports = { create, index, remove, show, update, add };
+function eliminate (cartData, id) {
+    const updatedCartData = cartData.filter(item => item.id !== id);
+    return updatedCartData;
+}
+
+module.exports = { create, index, remove, show, update, add, eliminate };
