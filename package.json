@@ -1,0 +1,26 @@
+{
+  "name": "commandline-inventory-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "index": "node index.js index",
+    "create": "node index.js create",
+    "remove": "node index.js remove",
+    "show": "node index.js show",
+    "update": "node index.js update",
+    "add": "node index.js add",
+    "eliminate": "node index.js eliminate",
+    "clear": "node index.js clear"
+  },
+  "keywords": [],
+  "author": "Abraham Zambrano T.",
+  "license": "ISC",
+  "dependencies": {
+    "nanoid": "^3.3.7"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
