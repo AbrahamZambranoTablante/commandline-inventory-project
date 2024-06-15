@@ -19,7 +19,7 @@ function index (tShirtsData) {
     return tShirtsData.map( tShirt => `ID:${tShirt.id} - TEAM:${tShirt.team} - SEASON:${tShirt.season}`).join("\n");
 }
 
-function remove(tShirtsData, id){
+function remove (tShirtsData, id){
     const updatedTShirtData = tShirtsData.filter(tShirt => tShirt.id !== id);
     return updatedTShirtData;
 }
@@ -28,4 +28,11 @@ function show (tShirtsData, id) {
     const foundItem = tShirtsData.find(tShirt => tShirt.id === id);
     return `TEAM: ${foundItem.team} \nSEASON: ${foundItem.season} \nSIZE: ${foundItem.size} \nPRICE: ${foundItem.price} \nIN STOCK: ${foundItem.stock} \nID: ${foundItem.id}`;
 }
-module.exports = { create, index, remove, show };
+
+function update (tShirtsData, id, newStock) {
+    const index = tShirtsData.findIndex(tShirt => tShirt.id === id);
+    tShirtsData[index].stock = newStock;
+    return tShirtsData;
+}
+
+module.exports = { create, index, remove, show, update };
