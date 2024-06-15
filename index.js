@@ -1,5 +1,5 @@
 const { readJSONFile, writeJSONFile} = require("./src/helpers");
-const { create, index, remove } = require("./src/t-shirtsController");
+const { create, index, remove, show } = require("./src/t-shirtsController");
 
 function run () {
     let tShirtsData = readJSONFile("./data", "t-shirts.json");
@@ -24,6 +24,10 @@ function run () {
             updatedTShirtList = remove(tShirtsData, id); 
             inform("Item was removed");
             writeToFile = true;
+        break;
+        case "show":
+            const item = show(tShirtsData, id);
+            inform("SELECTED T-SHIRT"+"\n"+"----------------"+"\n"+item);
         break;
         default:
         inform("there was an error");
