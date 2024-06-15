@@ -1,5 +1,5 @@
 const { readJSONFile, writeJSONFile} = require("./src/helpers");
-const { create, index, remove, show, update, add, eliminate, clear } = require("./src/t-shirtsController");
+const { create, index, remove, show, update, add, eliminate, clear, cart } = require("./src/t-shirtsController");
 
 function run () {
     let tShirtsData = readJSONFile("./data", "t-shirts.json");
@@ -37,6 +37,9 @@ function run () {
             updatedTShirtList = update(tShirtsData, id, newStock);
             inform("Item was updated")
             writeToFile = true;
+        break;
+        case "cart":
+            inform(cart(shoppingCart));
         break;
         case "add":
             updatedCart = add(tShirtsData, shoppingCart, id);
