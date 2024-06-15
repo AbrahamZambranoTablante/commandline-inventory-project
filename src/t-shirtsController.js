@@ -35,4 +35,10 @@ function update (tShirtsData, id, newStock) {
     return tShirtsData;
 }
 
-module.exports = { create, index, remove, show, update };
+function add (tShirtsData, cartData, id) {
+    const foundItem = tShirtsData.find(tShirt => tShirt.id === id);
+    cartData.push(foundItem);
+    return cartData;
+}
+
+module.exports = { create, index, remove, show, update, add };

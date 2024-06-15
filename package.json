@@ -12,7 +12,8 @@
     "update": "node index.js update",
     "add": "node index.js add",
     "eliminate": "node index.js eliminate",
-    "clear": "node index.js clear"
+    "clear": "node index.js clear",
+    "cart": "node index.js cart"
   },
   "keywords": [],
   "author": "Abraham Zambrano T.",
