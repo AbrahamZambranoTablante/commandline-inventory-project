@@ -13,12 +13,14 @@
     "add": "node index.js add",
     "eliminate": "node index.js eliminate",
     "clear": "node index.js clear",
-    "cart": "node index.js cart"
+    "cart": "node index.js cart",
+    "instructions": "node index.js instructions"
   },
   "keywords": [],
   "author": "Abraham Zambrano T.",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^4.1.0",
     "nanoid": "^3.3.7"
   },
   "devDependencies": {

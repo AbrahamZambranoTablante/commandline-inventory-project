@@ -1,15 +1,15 @@
 const { readJSONFile, writeJSONFile} = require("./src/helpers");
-const { create, index, remove, show, update, add, eliminate, clear, cart } = require("./src/t-shirtsController");
+const { create, index, remove, show, update, add, eliminate, clear, cart, instructions } = require("./src/t-shirtsController");
 
 function run () {
     let tShirtsData = readJSONFile("./data", "t-shirts.json");
     let shoppingCart = readJSONFile("./data", "cart.json");
     const command = process.argv[2];
-    let newTShirt = process.argv.slice(3);
+    const newTShirt = process.argv.slice(3);
     let writeToFile = false;
     let writeToCartFile = false;
-    let id = process.argv[3]
-    let newStock = process.argv[4];
+    const id = process.argv[3]
+    const newStock = process.argv[4];
     const inform = console.log;
     let updatedTShirtList = [];
     let updatedCart = [];
@@ -52,9 +52,12 @@ function run () {
             writeToCartFile = true;
         break;
         case "clear":
-            updatedCart = clear(shoppingCart);
+            updatedCart = clear();
             inform("The cart was cleared");
             writeToCartFile = true;
+        break;
+        case "instructions":
+            inform(instructions())
         break;
         default:
         inform("there was an error");
