@@ -77,7 +77,9 @@ function instructions () {
     ${chalk.green("add:")} adds a new item to the shopping cart. ${chalk.yellow("Requires the ID of such item after the command.")}\n
     ${chalk.green("eliminate:")} deletes one specific item from the shopping cart. ${chalk.yellow("Requires the ID of such item after the command.")}.\n
     ${chalk.green("clear:")} deletes all items from the shopping cart.\n
-    ${chalk.green("instructions:")} displays directions to use the inventory and shopping cart.`
+    ${chalk.green("instructions:")} displays directions to use the inventory and shopping cart.
+    ${chalk.green("test:")} displays all test cases where the all functions of this app were proved`;
+    
 }
 
 module.exports = { create, index, remove, show, update, add, eliminate, clear, cart, instructions };
