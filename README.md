@@ -14,6 +14,7 @@ This JavaScript command line application manages the inventory for a soccer team
 - **Remove from Cart**: Remove a specific item from the shopping cart. (`eliminate`)
 - **Clear Cart**: Remove all items from the shopping cart. (`clear`)
 - **Instructions**: Display the instructions for correct usage of the app. (`instructions`)
+- **Tests**: Display the tests performed over the functions of this app. (`test`)
 
 ## Installation
 
