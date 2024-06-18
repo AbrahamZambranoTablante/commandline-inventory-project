@@ -39,7 +39,7 @@ function run () {
             writeToFile = true;
         break;
         case "cart":
-            inform(cart(shoppingCart));
+            inform("SHOPPING CART"+"\n"+cart(shoppingCart));
         break;
         case "add":
             updatedCart = add(tShirtsData, shoppingCart, id);
@@ -52,7 +52,7 @@ function run () {
             writeToCartFile = true;
         break;
         case "clear":
-            updatedCart = clear();
+            updatedCart = clear(shoppingCart);
             inform("The cart was cleared");
             writeToCartFile = true;
         break;

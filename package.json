@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
     "index": "node index.js index",
     "create": "node index.js create",
     "remove": "node index.js remove",

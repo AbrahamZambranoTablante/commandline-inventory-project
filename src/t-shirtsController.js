@@ -38,7 +38,7 @@ function update (tShirtsData, id, newStock) {
 
 function cart (cartData) {
     const total = cartData.reduce((acc, item) => acc += +item.price ,0);
-    return cartData.map( item => `SHOPPING CART \n ID:${item.id} - TEAM:${item.team} - SEASON:${item.season} PRICE:${item.price}`).join("\n") + "\n" + `TOTAL: ${total.toFixed(2)}`;
+    return cartData.map( item => `ID:${item.id} - TEAM:${item.team} - SEASON:${item.season} PRICE:${item.price}`).join("\n") + "\n" + `TOTAL: ${total.toFixed(2)}`;
 }
 
 function add (tShirtsData, cartData, id) {
@@ -52,8 +52,9 @@ function eliminate (cartData, id) {
     return updatedCartData;
 }
 
-function clear () {
-    return [];
+function clear (cartData) {
+    cartData = [];
+    return cartData;
 }
 
 function instructions () {
